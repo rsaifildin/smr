@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#111c2c",
+                    "primary-fixed": "#9ef3d6",
+                    "inverse-primary": "#82d7ba",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "secondary-fixed": "#d8e3fa",
+                    "outline-variant": "#bec9c3",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#002118",
+                    "outline": "#6f7a74",
+                    "background": "#f7f9fb",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#3e4944",
+                    "on-background": "#191c1e",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-surface": "#191c1e",
+                    "surface-container-high": "#e6e8ea",
+                    "secondary-fixed-dim": "#bcc7dd",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#d5e0f7",
+                    "on-tertiary-fixed": "#161c22",
+                    "surface-bright": "#f7f9fb",
+                    "inverse-surface": "#2d3133",
+                    "tertiary-fixed": "#dde3eb",
+                    "on-tertiary-fixed-variant": "#41474e",
+                    "primary": "#00513f",
+                    "surface": "#f7f9fb",
+                    "surface-dim": "#d8dadc",
+                    "on-tertiary-container": "#d3d9e1",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#00513f",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#006b54",
+                    "surface-container": "#eceef0",
+                    "primary-fixed-dim": "#82d7ba",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#016b54",
+                    "tertiary-container": "#585f66",
+                    "on-primary-container": "#94e8cb",
+                    "on-secondary-container": "#586377",
+                    "secondary": "#545f72"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "lg": "48px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "margin": "32px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "h2": ["Manrope"],
+                    "body-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h3": ["Manrope"],
+                    "h1": ["Manrope"],
+                    "button": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.4) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest docked full-width top-0 sticky z-50 border-b border-outline-variant shadow-sm h-20 flex items-center">
+<div class="flex justify-between items-center w-full max-w-[1280px] mx-auto px-margin h-full">
+<div class="font-h3 text-h3 font-bold text-primary tracking-tight">
+<img alt="Sanatorio Manuel Riveros Logo" class="w-auto object-contain h-24" src="https://lh3.googleusercontent.com/aida/ADBb0uii3RcFZRKNbQk-2krcegE43VGnkr773PnZH1slIC7AI075GCz6LmozTPXu7G7_20LKQPuOZmglXDTs_TWt7Pu86LfzmBDPpq27duLXQg1xFfbh0fJVrpYDz8G-zSNWv_YyzXln7IsuS7CKB701D3mqDUNIOlOsa6X0CbwerLC9MeHiFxJ2XRT34GdZ8yxx-mR_-ggWvkZ_jQ1514T4ECNwPukzaq3ZXeZb4-eJhMeDav6M6xgY4AaQyopkRFhKBoxuHey5l12T"/>
+</div>
+<div class="flex items-center gap-md">
+<div class="hidden sm:flex flex-col items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant">TELÉFONO</span>
+<span class="font-button text-button text-primary">021-2376511</span>
+</div>
+<button class="bg-primary text-on-primary px-md py-sm font-button text-button rounded-lg hover:bg-primary-container active:scale-95 transition-all duration-200">Reserva Turno</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-right" data-alt="Main building of Sanatorio Manuel Riveros with green glass facade." src="https://lh3.googleusercontent.com/aida/ADBb0uj4oRZB4wF7eD_pi7n_K--wRhMqr6u4Zp0KN97uh7oiZ-_HrE4o9lmcHJsl-ZrbN1yM1MXDoGDdPeG-5vAj84z4aWZrN5KNlAmyz--_exuBsIjNZjv24jfP3SMuryzdmzjjPYRej8dEvz4jbsprbzqJ3PRCqxrYyeliFVnvigAsvxQu0w4Ed6d-zaFH5u3cQd_SAsJUhk9QjBzAMnKo1tuhK5_VChUuJeySP85-aojdWi1fAh8tbxTMdiLSHEK61jvIxYXWc7C5"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 w-full max-w-[1280px] mx-auto px-margin">
+<div class="max-w-xl">
+<span class="font-label-caps text-label-caps text-primary mb-base inline-block">EXCELENCIA MÉDICA</span>
+<h1 class="font-h1 text-h1 text-primary mb-md">Cuidamos su salud</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed">
+                    Comprometidos con el bienestar integral de su familia a través de tecnología de vanguardia y calidez humana.
+                </p>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-[1280px] mx-auto px-margin">
+<div class="grid lg:grid-cols-2 gap-xl items-center">
+<div class="relative">
+<div class="absolute -top-4 -left-4 w-32 h-32 bg-primary-fixed -z-10 rounded-xl opacity-30"></div>
+<img class="rounded-xl shadow-sm border border-outline-variant w-full object-cover aspect-video" data-alt="Clean, professional medical environment with a neutral background, featuring a desk and seating arrangement." src="https://lh3.googleusercontent.com/aida/ADBb0ujwIJ5AY2poyjjviFhaC-uTZZCIOK11vuysolXkTQkfiziSus3MHA5VbyWjuewWpQcxfE59yPWMhc95XbnKt2gSuk_l8GhVDembnTyM9bDhNXHU3jNQmgAcTIAvs-xRBZLR60POhrG34nYpz6QBu0XshY-eVsrajGGZoHS1E_iCtCToPFXywoo6ciAISQ9XMYch6B073YwDCAU1WIEj6PNMzLHt8vBn7MgblhDT_PHjDR8ldcV3q_QJjg"/>
+</div>
+<div><iframe allowfullscreen="" class="w-full h-full min-h-[450px]" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3422.8337191874275!2d-54.646434724825724!3d-25.50475887751417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f685722101b187%3A0x4ac7b70fc8bcb54!2sSanatorio%20Manuel%20Riveros!5e1!3m2!1ses!2spy!4v1778188241595!5m2!1ses!2spy" style="border:0;" width="100%"></iframe>
+<a class="absolute bottom-lg left-1/2 -translate-x-1/2 w-[90%] bg-surface-container-lowest/95 backdrop-blur-sm p-md rounded-full shadow-xl flex items-center justify-between border border-primary/20 hover:bg-primary hover:text-on-primary transition-all duration-300 group/link" href="https://www.google.com/maps/search/?api=1&amp;query=Sanatorio+Manuel+Riveros" target="_blank">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center group-hover/link:bg-on-primary group-hover/link:text-primary transition-colors">
+<span class="material-symbols-outlined">map</span>
+</div>
+<div>
+<div class="font-button text-button">Ver en Google Maps</div>
+<div class="font-body-sm text-body-sm opacity-80">Abrir navegación GPS</div>
+</div>
+</div>
+<span class="material-symbols-outlined mr-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a></div>
+</div>
+</div>
+</section>
+<section class="py-xl bg-surface">
+<div class="max-w-[1280px] mx-auto px-margin">
+<div class="text-center mb-xl">
+<span class="font-label-caps text-label-caps text-primary mb-base inline-block uppercase tracking-widest">INSTITUCIONAL</span>
+<h2 class="font-h2 text-h2 text-primary">Nuestro Propósito</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-lg">
+<!-- Misión -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined">flag</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-sm">Misión</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Contribuir al mejoramiento de la salud, el bienestar y la calidad de vida de toda la comunidad.
+                    </p>
+</div>
+<!-- Visión -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-sm">Visión</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Facilitar el acceso a los servicios de salud de alta calidad a nuestros beneficiarios y promover de forma responsable el bienestar de nuestros colaboradores.
+                    </p>
+</div>
+<!-- Valores -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-sm">Valores</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Integridad, respeto, compromiso, responsabilidad, solidaridad.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-margin">
+<div class="text-center mb-xl">
+<span class="font-label-caps text-label-caps text-primary mb-base inline-block uppercase tracking-widest">NUESTROS SERVICIOS</span>
+<h2 class="font-h2 text-h2 text-primary">Servicios Médicos Integrales</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-primary text-[48px] mb-md">emergency</span>
+<h3 class="font-h3 text-h3 text-primary mb-sm">Urgencias 24hs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Atención inmediata con equipos de respuesta rápida y tecnología de soporte vital avanzado disponible las 24 horas del día.</p>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-all flex flex-col group">
+<span class="material-symbols-outlined text-primary text-[32px] mb-md">biotech</span>
+<h3 class="font-h3 text-h3 text-primary mb-sm">Análisis Clínicos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">Laboratorio de alta complejidad con entrega de resultados online.</p>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-all flex flex-col group">
+<span class="material-symbols-outlined text-primary text-[32px] mb-md">medication</span>
+<h3 class="font-h3 text-h3 text-primary mb-sm">Farmacia</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">Stock completo de medicamentos con atención personalizada las 24hs.</p>
+</div>
+<div class="md:col-span-8 bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row gap-lg group">
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary text-[32px] mb-md">person_search</span>
+<h3 class="font-h3 text-h3 text-primary mb-sm">Consultas Externas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">Más de 20 especialidades médicas con turnos programados y atención por orden de llegada.</p>
+</div>
+<div class="flex-1 hidden md:block">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Close up of a medical consultation setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8z4bNAPWWXVaXamMuMFivfftPTNbvntIoVsilNw6c8at7sONOhyC10eenS3MUtaLYhDfK4e0DFcf3oZO0HfwdxNsWKxsFrkXVfIPaPJ60HB7QmK8HQJQtnxS3T9UQyw_jhLCxiAv7glZDY38GPZdo-QO22LImbe4w_nBH5y_Dj5hr9OZdrRrhFTgiDWMklAAxpwXa4_askxr-nGTjWyylx0n-Hc3NPMhSJVatjc-V6JJcbf3apo5nsFfBQ_0w0G1R9C_cPBShaaI"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location & Contact Section -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-[1280px] mx-auto px-margin">
+<div class="grid lg:grid-cols-2 gap-xl">
+<div class="flex flex-col justify-center">
+<h2 class="font-h2 text-h2 text-primary mb-lg">Ubicación y Contacto</h2>
+<div class="space-y-lg">
+<div class="flex gap-md">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<h4 class="font-h3 text-h3 text-on-background mb-xs">Nuestra Sede</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Avda. San Blás Km 4 1/2</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Ciudad del Este, Paraguay</p>
+</div>
+</div>
+<div class="flex gap-md">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">call</span>
+</div>
+<div>
+<h4 class="font-h3 text-h3 text-on-background mb-xs">Central Telefónica</h4>
+<p class="font-button text-button text-primary">021-2376511</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-70">Atención 24hs</p>
+</div>
+</div>
+<div class="flex gap-md">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<div>
+<h4 class="font-h3 text-h3 text-on-background mb-xs">Horarios Administrativos</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Lunes a Sábado: 07:00 - 19:00 hs</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h-[450px] lg:h-full min-h-[400px] rounded-full overflow-hidden border border-outline-variant shadow-lg relative group transition-all duration-500 hover:shadow-xl"><iframe allowfullscreen="" class="w-full h-full min-h-[450px]" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3422.8337191874275!2d-54.646434724825724!3d-25.50475887751417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f685722101b187%3A0x4ac7b70fc8bcb54!2sSanatorio%20Manuel%20Riveros!5e1!3m2!1ses!2spy!4v1778188241595!5m2!1ses!2spy" style="border:0;" width="100%"></iframe>
+<a class="absolute bottom-lg left-1/2 -translate-x-1/2 w-[90%] bg-surface-container-lowest/95 backdrop-blur-sm p-md rounded-full shadow-xl flex items-center justify-between border border-primary/20 hover:bg-primary hover:text-on-primary transition-all duration-300 group/link" href="https://www.google.com/maps/search/?api=1&amp;query=Sanatorio+Manuel+Riveros" target="_blank">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center group-hover/link:bg-on-primary group-hover/link:text-primary transition-colors">
+<span class="material-symbols-outlined">map</span>
+</div>
+<div>
+<div class="font-button text-button">Ver en Google Maps</div>
+<div class="font-body-sm text-body-sm opacity-80">Abrir navegación GPS</div>
+</div>
+</div>
+<span class="material-symbols-outlined mr-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant py-lg w-full">
+<div class="w-full px-margin max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="flex flex-col gap-xs items-center md:items-start text-center md:text-left">
+<div class="font-h3 text-h3 font-bold text-primary">
+<img alt="Sanatorio Manuel Riveros Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uii3RcFZRKNbQk-2krcegE43VGnkr773PnZH1slIC7AI075GCz6LmozTPXu7G7_20LKQPuOZmglXDTs_TWt7Pu86LfzmBDPpq27duLXQg1xFfbh0fJVrpYDz8G-zSNWv_YyzXln7IsuS7CKB701D3mqDUNIOlOsa6X0CbwerLC9MeHiFxJ2XRT34GdZ8yxx-mR_-ggWvkZ_jQ1514T4ECNwPukzaq3ZXeZb4-eJhMeDav6M6xgY4AaQyopkRFhKBoxuHey5l12T"/>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2026 Sanatorio Manuel Riveros. Avda. San Blás Km 4 1/2. All rights reserved.</p>
+</div>
+<div class="flex gap-sm">
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant hover:bg-primary hover:text-on-primary transition-all focus:ring-2 focus:ring-primary">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant hover:bg-primary hover:text-on-primary transition-all focus:ring-2 focus:ring-primary">
+<span class="material-symbols-outlined text-lg">mail</span>
+</button>
+</div>
+</div>
+</footer>
+</body></html>
